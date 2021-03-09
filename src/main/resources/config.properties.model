@@ -1,0 +1,13 @@
+# Application configuration
+app.name=
+# Application secret key to generate tokens
+secret=
+
+# JDBC Configuration
+jdbc.driver=
+jdbc.url=
+jdbc.username=
+jdbc.password=
+
+# Minimal logging level (INFO, DEBUG, WARN, ERROR)
+logging.level=
