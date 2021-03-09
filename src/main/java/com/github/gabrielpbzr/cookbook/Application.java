@@ -1,6 +1,6 @@
 package com.github.gabrielpbzr.cookbook;
 
-import com.github.gabrielpbzr.cookbook.recipes.RecipeController;
+import com.github.gabrielpbzr.cookbook.web.RecipeController;
 import com.github.gabrielpbzr.cookbook.recipes.RecipeDAO;
 import com.github.gabrielpbzr.cookbook.recipes.RecipeDAOJPA;
 import com.github.gabrielpbzr.cookbook.utils.Configuration;

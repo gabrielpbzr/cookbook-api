@@ -1,4 +1,4 @@
-package com.github.gabrielpbzr.cookbook.domain;
+package com.github.gabrielpbzr.cookbook.recipes;
 
 import java.io.Serializable;
 import java.util.Objects;

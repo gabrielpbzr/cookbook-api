@@ -1,6 +1,5 @@
 package com.github.gabrielpbzr.cookbook.recipes;
 
-import com.github.gabrielpbzr.cookbook.domain.Recipe;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;

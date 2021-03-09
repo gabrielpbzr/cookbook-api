@@ -1,7 +1,8 @@
-package com.github.gabrielpbzr.cookbook.recipes;
+package com.github.gabrielpbzr.cookbook.web;
 
-import com.github.gabrielpbzr.cookbook.domain.Recipe;
 import com.github.gabrielpbzr.cookbook.exceptions.RecordNotFoundException;
+import com.github.gabrielpbzr.cookbook.recipes.Recipe;
+import com.github.gabrielpbzr.cookbook.recipes.RecipeDAO;
 import com.github.gabrielpbzr.cookbook.utils.Strings;
 import io.javalin.apibuilder.CrudHandler;
 import io.javalin.http.Context;
