@@ -47,4 +47,8 @@ public final class Application {
         javalinApp.stop();
         logger.info("Application stopped");
     }
+    
+    public String getBaseURL() {
+        return String.format("http://localhost:%d", javalinApp.port());
+    }
 }
