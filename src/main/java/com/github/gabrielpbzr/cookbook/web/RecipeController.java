@@ -35,6 +35,7 @@ public class RecipeController implements CrudHandler {
             Recipe recipe = getRecipeFromRequest(ctx);
             recipeDao.save(recipe);
             ctx.status(HttpStatus.CREATED_201).header("Location", ctx.fullUrl()+"/"+recipe.getUuid());
+            logger.info(String.format(LOG_MSG_FORMAT, recipe.getUuid(), "created"));
         } catch (IllegalArgumentException ile) {
             ctx.status(HttpStatus.BAD_REQUEST_400).result(ile.getLocalizedMessage());
         } catch (Exception e) {
