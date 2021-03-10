@@ -24,7 +24,12 @@ public class Migrations {
             String url = config.getValue("jdbc.url");
             String user = config.getValue("jdbc.user");
             String password = config.getValue("jdbc.password");
-            Flyway flyway = Flyway.configure().dataSource(url, user, password).load();
+            
+            Flyway flyway = Flyway.configure()
+                    .baselineOnMigrate(true)
+                    .dataSource(url, user, password)
+                    .load();
+            
             flyway.migrate();
         } catch (FlywayException fe) {
             throw new DatabaseMigrationException(fe);
