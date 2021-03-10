@@ -3,4 +3,4 @@ nb-configuration.xml
 .idea
 .nbproject
 target/
-src/main/resources/config.properties
+src/main/resources/.env
