@@ -1,0 +1,13 @@
+# Application configuration
+app.name=Cookbook
+# Application secret key to generate tokens
+secret=%SECRET%
+
+# JDBC Configuration
+jdbc.driver=%JDBC_DRIVER%
+jdbc.url=%JDBC_URL%
+jdbc.username=%JDBC_USER%
+jdbc.password=%JDBC_PASSWORD%
+
+# Minimal logging level (INFO, DEBUG, WARN, ERROR)
+logging.level=%LOG_LEVEL%
