@@ -34,10 +34,6 @@ public class PaginatedResponse {
         return currentPage;
     }
 
-    protected void setCurrentPage(long currentPage) {
-        this.currentPage = currentPage;
-    }
-
     /**
      * Get total of pages available
      * @return 
@@ -46,19 +42,11 @@ public class PaginatedResponse {
         return totalPageCount;
     }
 
-    protected void setTotalPageCount(long totalPageCount) {
-        this.totalPageCount = totalPageCount;
-    }
-
     /**
      * Return current data chunk
      * @return data chunk
      */
     public List getData() {
         return data;
-    }
-
-    protected void setData(List data) {
-        this.data = data;
     }
 }
