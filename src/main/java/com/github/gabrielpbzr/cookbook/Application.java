@@ -34,16 +34,18 @@ public final class Application {
     private void init() {
         logger.debug("Initializing app...");
         try {
-            
+
             Migrations.apply(config);
             logger.debug("Database migrations applied...");
-            
+
             RecipeDAO recipeDao = new RecipeDAOJPA(entityManagerProvider.getEntityManager());
             RecipeController recipeController = new RecipeController(recipeDao, logger);
-            
-            this.javalinApp = Javalin.create()
-                    .routes(() -> crud("/api/recipes/:id", recipeController));
-            
+
+            this.javalinApp = Javalin.create(config -> {
+                  config.enableCorsForAllOrigins();
+                  config.ignoreTrailingSlashes = true;
+                }).routes(() -> crud("/api/recipes/:id", recipeController));
+
             logger.debug("App initialized!");
         } catch (DatabaseMigrationException me) {
             logger.error("Error during database migration", me);
